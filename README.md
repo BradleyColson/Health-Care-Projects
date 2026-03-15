@@ -18,14 +18,17 @@ Technical Competencies
 🏥 Project 1: CMS Operational Efficiency Index
 Business Problem: CMS reports "Timeliness of Care" using qualitative text (e.g., "Above the national average"). I converted this to a 1–3 numerical index to identify regions at "Operational Risk."
 
-State	Avg Efficiency Index	Interpretation	Total Hospitals
-SD	2.93	Above National Average (High Efficiency)	15
-WI	2.79	Above National Average (High Efficiency)	103
-KS	2.70	Above National Average (High Efficiency)	63
-...	...	...	...
-NY	1.37	Below National Average (Operational Risk)	152
-CT	1.33	Below National Average (Operational Risk)	27
-NJ	1.19	Below National Average (Operational Risk)	63
+The following table summarizes the calculated **Efficiency Index** (3.0 = High Efficiency, 1.0 = High Risk). 
+
+| State | Avg Efficiency Index | Interpretation | Total Hospitals |
+| :--- | :--- | :--- | :--- |
+| **SD** | **2.93** | Above National Average (High Efficiency) | 15 |
+| **WI** | **2.79** | Above National Average (High Efficiency) | 103 |
+| **KS** | **2.70** | Above National Average (High Efficiency) | 63 |
+| ... | ... | ... | ... |
+| **NY** | 1.37 | Below National Average (Operational Risk) | 152 |
+| **CT** | 1.33 | Below National Average (Operational Risk) | 27 |
+| **NJ** | **1.19** | **Below National Average (Operational Risk)** | 63 |
 
 Project 2: Diabetes 30-Day Readmission & LOS Analysis
 Business Problem: High readmission rates trigger CMS financial penalties (HRRP). This project identifies the intersection of diagnosis type and Average Length of Stay (LOS).
