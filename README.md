@@ -11,6 +11,8 @@ Project 1: CMS Operational Efficiency Index
 
 Project 2: Diabetes 30-Day Readmission Analysis
 
+Diabetes Readmission Risk by Age DemographicBusiness Problem: 30-day readmissions trigger CMS financial penalties. This analysis identifies which age cohorts cross the 12% high-risk threshold, allowing for targeted "Transition of Care" resource allocation.Age GroupTotal EncountersReadmission Rate (<30 days)Clinical Priority[70-80)26,06812.45%🚨 High Risk[80-90)17,19712.18%🚨 High Risk[60-70)22,48311.45%Standard Risk[50-60)17,25610.37%Standard Risk[40-50)9,6859.07%Standard Risk[30-40)3,7758.32%Standard Risk
+
 Methodology & Interpretation Logic
 
 Technical Competencies
