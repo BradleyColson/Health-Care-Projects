@@ -46,19 +46,25 @@ Business Problem: High readmission rates trigger CMS financial penalties (HRRP).
 📝 Technical Summary & Clinical Insight
 The 12% Threshold: National clinical benchmarks for diabetic 30-day readmissions typically hover between 11% and 15%. By setting a 12% "High Risk" threshold, this query isolates diagnoses—specifically those in the [80-90) age bracket and specific circulatory codes—that are most likely to drive federal reimbursement penalties.
 
+SELECT 
+    `diag_1` AS Primary_Diagnosis_Code,
+    COUNT(*) AS Total_Patients,
+    ROUND(SUM(CASE WHEN `readmitted` = '<30' THEN 1 ELSE 0 END) / COUNT(*) * 100, 2) AS Readmit_Rate_Percent,
+    ROUND(AVG(`time_in_hospital`), 2) AS Avg_Stay_Days,
+    CASE 
+        WHEN (SUM(CASE WHEN `readmitted` = '<30' THEN 1 ELSE 0 END) / COUNT(*) * 100) > 12 THEN 'High Risk (Requires Intervention)'
+        ELSE 'Standard Risk'
+    END AS Clinical_Priority
+FROM diabetic_data
+GROUP BY `diag_1`
+HAVING Total_Patients > 50
+ORDER BY Readmit_Rate_Percent DESC
+LIMIT 5;
+
 The LOS Correlation: The data reveals that a shorter Length of Stay (LOS) doesn't always correlate with higher readmissions; rather, specific primary diagnoses (diag_1) show "high-intensity" patterns where patients require longer stabilization periods to prevent immediate return.
 
 MySQL Query: Clinical Drill-Down
 
-Project 2: Diabetes 30-Day Readmission & LOS Analysis
-Business Problem: High readmission rates trigger CMS financial penalties (HRRP). This project identifies the intersection of diagnosis type and Average Length of Stay (LOS).
-
-📝 Technical Summary & Clinical Insight
-The 12% Threshold: National clinical benchmarks for diabetic 30-day readmissions typically hover between 11% and 15%. By setting a 12% "High Risk" threshold, this query isolates diagnoses—specifically those in the [80-90) age bracket and specific circulatory codes—that are most likely to drive federal reimbursement penalties.
-
-The LOS Correlation: The data reveals that a shorter Length of Stay (LOS) doesn't always correlate with higher readmissions; rather, specific primary diagnoses (diag_1) show "high-intensity" patterns where patients require longer stabilization periods to prevent immediate return.
-
-MySQL Query: Clinical Drill-Down
 
 
 Methodology & Interpretation Guide
