@@ -13,14 +13,7 @@ Project 2: Diabetes 30-Day Readmission Analysis
 
 Diabetes Readmission Risk by Age DemographicBusiness Problem: 30-day readmissions trigger CMS financial penalties. This analysis identifies which age cohorts cross the 12% high-risk threshold, allowing for targeted "Transition of Care" resource allocation.
 
-| Age Group | Total Encounters | Readmission Rate (<30 days) | Clinical Priority |
-| :--- | :---: | :---: | :--- |
-| **[70-80)** | 26,068 | **12.45%** | 🚨 High Risk |
-| **[80-90)** | 17,197 | **12.18%** | 🚨 High Risk |
-| [60-70) | 22,483 | 11.45% | Standard Risk |
-| [50-60) | 17,256 | 10.37% | Standard Risk |
-| [40-50) | 9,685 | 9.07% | Standard Risk |
-| [30-40) | 3,775 | 8.32% | Standard Risk |
+
 
 Methodology & Interpretation Logic
 
@@ -43,6 +36,15 @@ The following table summarizes the calculated **Efficiency Index** (3.0 = High E
 
 Project 2: Diabetes 30-Day Readmission & LOS Analysis
 Business Problem: High readmission rates trigger CMS financial penalties (HRRP). This project identifies the intersection of diagnosis type and Average Length of Stay (LOS).
+
+| Age Group | Total Encounters | Readmission Rate (<30 days) | Clinical Priority |
+| :--- | :---: | :---: | :--- |
+| **[70-80)** | 26,068 | **12.45%** | 🚨 High Risk |
+| **[80-90)** | 17,197 | **12.18%** | 🚨 High Risk |
+| [60-70) | 22,483 | 11.45% | Standard Risk |
+| [50-60) | 17,256 | 10.37% | Standard Risk |
+| [40-50) | 9,685 | 9.07% | Standard Risk |
+| [30-40) | 3,775 | 8.32% | Standard Risk |
 
 📝 Technical Summary & Clinical Insight
 The 12% Threshold: National clinical benchmarks for diabetic 30-day readmissions typically hover between 11% and 15%. By setting a 12% "High Risk" threshold, this query isolates diagnoses—specifically those in the [80-90) age bracket and specific circulatory codes—that are most likely to drive federal reimbursement penalties.
